@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module03Assignment</title>
+
+</head>
+  
+<body>
+ 
+  <h1>Module 03 Assignment</h1>
+  
+ 
+ <script>
+    // A for loop to check if each number from 0 to 10 is odd or even
+    // Each count number will either be odd or even and will be displayed
+    // To the user
+
+    document.write("For loop!<br>");
+    for (var count = 0; count <= 10; count++) {
+        document.write(`Count ${count} is ${count % 2 === 0 ? 'even' : 'odd'}<br>`);
+    }
+    
+    // Here we ask the user for a number between 5 and 20
+    var myNum;
+    do {
+        myNum = prompt("Enter a number between 5 and 20:");
+    } while (myNum < 5 || myNum > 20);
+    
+    // Here we are storing the subjects into an array
+    var subjects = ["Accounting", "Algebra", "Programming", "Art", "Data Analytics"];
+    
+    //  Array values are displayed using forEach()
+    document.write("Display array values:<br>");
+    document.write(subjects.join(', '));
+    </script>
+    
+  </body>
+  
+ 
+  
+  </html>
