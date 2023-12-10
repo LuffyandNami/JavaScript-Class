@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title> Module 05 Assignment </title>
+</head>
+
+<body>
+
+<script>
+    
+    // Assignment #1
+    // Literal object named myDog with the properties provided from wikipedia.
+    // I wasn't sure what type of breed the dog was, so I put unknown just like wikipedia provided to me.
+
+    function myDog(name, breed, tvProgram, notes) {
+        this.dogName = name;
+        this.dogBreed = breed;
+        this.tvProgram = tvProgram;
+        this.notes = notes;
+        this.mySound = "I am small but vicious.";
+
+        // Method to write a message about the dog and what show he was in. 
+
+        this.writeMessage = function () {
+            document.write(
+                "Hello, my name is " +
+                    this.dogName +
+                    ", I am best friends with " +
+                    this.notes +
+                    ". " +
+                    this.mySound +
+                    " I starred in the Anime show " +
+                    this.tvProgram +
+                    ". My breed is " +
+                    this.dogBreed +
+                    " and I was a ninja dog in the anime " +
+                    this.tvProgram +
+                    "."
+            );
+        };
+    }
+
+    // An instance of the "myDog" literal object.
+
+    var Dog = new myDog("Akamaru", "unknown", "Naruto", "Kiba Inzuka's ninja dog");
+
+    // The message about the 'myDog' that will display in the browser. 
+
+    Dog.writeMessage();
+
+
+    // Assignment #2
+    // Literal object named dogConst  
+
+    function myDogConst(name, breed, tvProgram, notes, canTalk) {
+    this.dogName = name;
+    this.dogBreed = breed;
+    this.tvProgram = tvProgram;
+    this.notes = notes;
+    this.mySound = "I am small but vicious.";
+    this.canTalk = canTalk;
+
+    
+    this.myGreeting = function () {
+        var greeting = "<br>" + "<br>" + "Hello, my name is " +
+            this.dogName +
+            ", I am best friends with " +
+            this.notes +
+            ". " +
+            this.mySound +
+            " I starred in the Anime show " +
+            this.tvProgram +
+            ". My breed is " +
+            this.dogBreed +
+            " and I was a ninja dog in the anime " +
+            this.tvProgram +
+            ".";
+
+        if (this.canTalk) {
+            greeting += " If I could talk, I would say the Leaf village is my ninja way.";
+        }
+
+        document.write(greeting);
+    };
+}
+
+var DogConst = new myDogConst("Akamaru", "unknown", "Naruto", "Kiba Inzuka's ninja dog", true);
+
+DogConst.myGreeting();
+
+</script>
+
+
+</body>
+</html>
